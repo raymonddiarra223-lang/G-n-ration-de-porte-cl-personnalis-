@@ -12,15 +12,25 @@
 Nom :
 <input id="nom" value="Raymond">
 
-<button onclick="generate()">Générer</button>
+<button onclick="download()">Télécharger STL</button>
 
 <script>
 
-function generate(){
+function download(){
 
 let nom = document.getElementById("nom").value;
 
-alert("Le porte clé sera généré pour : " + nom);
+let contenu = "Porte clé généré pour : " + nom;
+
+let fichier = new Blob([contenu], {type:"text/plain"});
+
+let lien = document.createElement("a");
+
+lien.href = URL.createObjectURL(fichier);
+
+lien.download = nom + "_porte_cle.stl";
+
+lien.click();
 
 }
 
