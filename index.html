@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Générateur porte clé</title>
+</head>
+
+<body>
+
+<h2>Générateur de porte clé personnalisé</h2>
+
+Nom :
+<input id="nom" value="Raymond">
+
+<button onclick="generate()">Générer</button>
+
+<script>
+
+function generate(){
+
+let nom = document.getElementById("nom").value;
+
+alert("Le porte clé sera généré pour : " + nom);
+
+}
+
+</script>
+
+</body>
+</html>
